@@ -3,43 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WANTED — The Sheriff</title>
-
+  <title>Wanted Posters - Poster 2</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 30px;
-      background:
-        radial-gradient(circle at center, rgba(255,255,255,.08), transparent 50%),
-        #2b1b0e;
+      background: #2b1b0e;
+      color: #241507;
       font-family: Georgia, "Times New Roman", serif;
     }
 
+    /* TOP NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 12px;
+      background: #160d06;
+      border-bottom: 4px solid #8a5a24;
+      box-shadow: 0 4px 15px rgba(0,0,0,.5);
+    }
+
+    .navbar a {
+      color: #f4daa1;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 18px;
+      border: 2px solid #8a5a24;
+      background: #38200d;
+      border-radius: 5px;
+    }
+
+    .navbar a:hover {
+      background: #6d421c;
+    }
+
+    /* POSTER */
     .poster {
-      width: min(700px, 100%);
+      width: min(700px, calc(100% - 30px));
+      margin: 40px auto;
       padding: 35px;
       text-align: center;
       color: #241507;
       background:
-        linear-gradient(rgba(244, 218, 161, .9), rgba(218, 181, 111, .9)),
+        linear-gradient(rgba(244, 218, 161, .95), rgba(218, 181, 111, .95)),
         repeating-linear-gradient(
           0deg,
           transparent,
           transparent 4px,
-          rgba(80, 45, 10, .08) 5px
+          rgba(80,45,10,.08) 5px
         );
       border: 12px solid #5b3515;
-      box-shadow:
-        0 20px 50px rgba(0,0,0,.65),
-        inset 0 0 30px rgba(75,40,10,.45);
+      box-shadow: 0 20px 50px rgba(0,0,0,.65), inset 0 0 30px rgba(75,40,10,.45);
       position: relative;
     }
 
@@ -88,11 +110,6 @@
       height: 100%;
       object-fit: cover;
       filter: sepia(80%) contrast(1.15);
-    }
-
-    .placeholder {
-      font-size: 80px;
-      color: #573716;
     }
 
     h1 {
@@ -144,10 +161,6 @@
     }
 
     @media (max-width: 600px) {
-      body {
-        padding: 10px;
-      }
-
       .poster {
         padding: 25px 18px;
         border-width: 7px;
@@ -171,45 +184,43 @@
 
 <body>
 
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="poster1.html">Poster 1</a>
+    <a href="poster2.html">Poster 2</a>
+  </nav>
+
+  <!-- POSTER 2 -->
   <main class="poster">
-
     <div class="wanted">WANTED</div>
-
-    <div class="subtitle">
-      DEAD OR ALIVE
-    </div>
+    <div class="subtitle">DEAD OR ALIVE</div>
 
     <div class="portrait">
-        <img src="images/Ethan.png" alt="Wanted person">
+      <img src="images/Menlam.png" alt="Wanted person">
     </div>
 
-    <h1>Ethan Tamasate</h1>
+    <h1>Menlam Dorji</h1>
 
     <div class="crime">
-      WANTED FOR: Robbing a blind homeless man
+      WANTED FOR: Helping Ethan Tamasate rob a blind homeless man
     </div>
 
     <section class="details">
-      <div><strong>Alias: </strong>The poor thief</div>
-      <div><strong>Age:</strong> 13</div>
-      <div><strong>Height:</strong> 3'2" gremlin</div>
-      <div><strong>Last Seen:</strong> Gooning in a public park</div>
+      <div><strong>Alias: </strong>The poor thief's accomplice</div>
+      <div><strong>Age: </strong>12</div>
+      <div><strong>Height: </strong>3'1" also gremlin</div>
+      <div><strong>Last Seen: </strong>Gooning to Ethan in a public park</div>
     </section>
 
-    <div class="reward">
-      REWARD: $0.5
-    </div>
+    <div class="reward">REWARD: $0.4</div>
 
     <div class="warning">
-      THIS INDIVIDUAL IS A DIPSHIT DO NOT FEED.
-      DO NOT APPROACH.
+      LIKE ETHAN THIS MAN IS ALSO A DIPSHIT, DO NOT FEED. DO NOT APPROACH.
     </div>
 
     <div class="contact">
-      Contact Menlam 
-      11 Coolgardie Street, Dunlop, ACT 2615
+      Contact Menlam
     </div>
-
   </main>
 
 </body>

@@ -1,2 +1,0 @@
-# Wbestie
-For coding class
