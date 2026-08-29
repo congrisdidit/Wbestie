@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanted Posters - Home</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #2b1b0e;
+      color: #f4daa1;
+      font-family: Georgia, "Times New Roman", serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* TOP NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 12px;
+      background: #160d06;
+      border-bottom: 4px solid #8a5a24;
+      box-shadow: 0 4px 15px rgba(0,0,0,.5);
+    }
+
+    .navbar a {
+      color: #f4daa1;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 18px;
+      border: 2px solid #8a5a24;
+      background: #38200d;
+      border-radius: 5px;
+    }
+
+    .navbar a:hover {
+      background: #6d421c;
+    }
+
+    /* MAIN CONTENT */
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .welcome {
+      text-align: center;
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+
+    .welcome h1 {
+      font-size: clamp(48px, 10vw, 80px);
+      margin: 0 0 20px 0;
+      color: #f4daa1;
+      text-shadow: 3px 3px 0 #8a5a24;
+      letter-spacing: 2px;
+    }
+
+    .welcome p {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #d9b88c;
+      margin: 0 0 30px 0;
+    }
+
+    /* POSTERS GRID */
+    .posters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 900px;
+      width: 100%;
+      padding: 0 20px;
+      margin-bottom: 50px;
+    }
+
+    .poster-card {
+      background: linear-gradient(rgba(244, 218, 161, .95), rgba(218, 181, 111, .95));
+      border: 8px solid #5b3515;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: #241507;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .poster-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,.7);
+    }
+
+    .poster-card .title {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .poster-card .thumbnail {
+      width: 100%;
+      height: 200px;
+      background: #d0ad70;
+      border: 4px solid #4e2b11;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .poster-card .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: sepia(80%) contrast(1.15);
+    }
+
+    .poster-card .description {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .poster-card .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #38200d;
+      color: #f4daa1;
+      border: 2px solid #8a5a24;
+      border-radius: 3px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      align-self: center;
+    }
+
+    .poster-card .button:hover {
+      background: #6d421c;
+    }
+
+    @media (max-width: 600px) {
+      .welcome h1 {
+        font-size: 40px;
+      }
+
+      .welcome p {
+        font-size: 16px;
+      }
+
+      .posters-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="poster1.html">Poster 1</a>
+    <a href="poster2.html">Poster 2</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="welcome">
+      <h1>WANTED POSTERS</h1>
+      <p>A collection of the most notorious criminals. Choose a poster below to view the full details.</p>
+    </div>
+
+    <!-- POSTERS GRID -->
+    <div class="posters-grid">
+      <a href="poster1.html" class="poster-card">
+        <div class="title">Ethan Tamasate</div>
+        <div class="thumbnail">
+          <img src="images/Ethan.png" alt="Ethan Tamasate">
+        </div>
+        <div class="description">WANTED FOR: Robbing a blind homeless man</div>
+        <div class="button">View Poster</div>
+      </a>
+
+      <a href="poster2.html" class="poster-card">
+        <div class="title">Menlam Dorji</div>
+        <div class="thumbnail">
+          <img src="images/Menlam.png" alt="Menlam Dorji">
+        </div>
+        <div class="description">WANTED FOR: Helping Ethan Tamasate rob a blind homeless man</div>
+        <div class="button">View Poster</div>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
